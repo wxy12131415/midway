@@ -76,6 +76,17 @@ export const bodyParser = {
   jsonLimit: '1mb',
 };
 ```
+也可以在src/config/config.default.ts中配置
+
+```//接收XML
+  config.bodyParser = {
+    enable: true,
+    enableTypes: ['json', 'form', 'text'],
+    extendTypes: {
+      text: ['text/xml', 'application/xml'],
+    },
+  };
+```
 
 更多配置可以查看 [koa-bodyparser](https://github.com/koajs/bodyparser) 文档。
 
